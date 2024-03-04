@@ -1,0 +1,137 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #d1e189;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #22c55e;
+            font-family: cursive;
+            font-size: 36px;
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #303030;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #1eae4e;
+        }
+        footer {
+            background-color: #a6d608;
+            padding: 30px 0;
+            color: black;
+            text-align: center;
+            display: block; /* Ensures footer is displayed as a block element */
+            clear: both; /* Clears floats */
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Legotlo Appointment Schedule</h1>
+        <img src=>
+        <form id="appointmentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <button type="submit">Schedule Appointment</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="w-full">
+            <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+                <div class="grid w-full grid-cols-1 gap-5 md:c=grid-cols-2 lg:grid-cols-3">
+                    <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                                <!-- Email SVG code -->
+                            </svg>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Email</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Contact us at</p>
+                        <a class="text-lg font-bold text-green-500" href="mailto: drlegotlo@gmail.com">drlegotlo@gmail.com</a>
+                         <!-- Footer -->
+        
+        </footer>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            
+            // Display confirmation message
+            alert("Appointment scheduled for " + name + " on " + date + " at " + time);
+            
+            // Optionally, you can send this data to a server for further processing
+        });
+    </script>
+</body>
+</html>
